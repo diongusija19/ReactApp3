@@ -1,5 +1,5 @@
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
 
 const app = express();
 const PORT = 4000;
@@ -54,6 +54,6 @@ app.delete('/api/tasks/:id', (req, res) => {
   return res.status(204).send();
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '127.0.0.1', () => {
   console.log(`Task API running at http://127.0.0.1:${PORT}`);
 });
